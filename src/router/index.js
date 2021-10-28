@@ -4,7 +4,7 @@ import Login from '.././components/Login'
 import Form from '.././components/Form'
 import Detail from '.././components/Detail'
 import List from '.././components/List'
-
+import Menu2 from ".././components/Menu2";
 
 const routes = [
     {
@@ -31,6 +31,23 @@ const routes = [
         path:"/list",
         name:"list",
         component:List
+    },
+    {
+        path:"/menu2",
+        name:"menu2",
+        component:Menu2,
+        children: [
+            {
+                path:"/detail",
+                name:"detail",
+                component:Detail
+            },
+            {
+                path:"/list",
+                name:"list",
+                component:List
+            }
+        ]
     }
 ]
 

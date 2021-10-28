@@ -77,7 +77,7 @@ export default {
             .post('http://127.0.0.1:8000/login', this.user)
             .then(function(response) {
               if (response.data.status === 200)
-                this.$router.push({path: "menu"})
+                this.$router.push({path: "menu2"})
               else {
                 console.log(response.data.message);
                 ElMessage({

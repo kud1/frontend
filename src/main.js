@@ -7,6 +7,7 @@ import Main from './components/Main'
 // import Form from './components/Form'
 // import Detail from './components/Detail'
 // import Menu2 from './components/Menu2'
+// import Login from "./components/Login";
 import router from './router/index'
 
 createApp(Main).use(ElementPlus).use(router).mount('#app')
