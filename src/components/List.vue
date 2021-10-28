@@ -16,6 +16,18 @@
         prop="email"
         label="地址">
     </el-table-column>
+    <el-table-column label="Operations">
+      <template #default="scope">
+        <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
+        >Edit</el-button
+        >
+        <el-button
+            size="mini"
+            type="danger"
+        >Delete</el-button
+        >
+      </template>
+    </el-table-column>
   </el-table>
   <div class="block">
     <el-pagination
@@ -41,6 +53,12 @@ export default {
         .catch(function (error) { // 请求失败处理
           console.log(error);
         });
+  },
+  methods: {
+    handleEdit(index, row) {
+      console.log(index, row);
+      this.$router.push({path: "detail"})
+    }
   }
 }
 </script>

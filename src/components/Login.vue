@@ -3,7 +3,9 @@
     <div style="display: flex;justify-content: center;margin-top: 150px">
       <el-card style="width: 380px">
         <div>
-          <span>登录</span>
+          <span><el-avatar
+              src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+          ></el-avatar></span>
         </div>
         <table>
           <tr>
