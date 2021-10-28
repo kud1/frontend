@@ -3,6 +3,7 @@ import Menu from '.././components/Menu'
 import Login from '.././components/Login'
 import Form from '.././components/Form'
 import Detail from '.././components/Detail'
+import List from '.././components/List'
 
 
 const routes = [
@@ -25,6 +26,11 @@ const routes = [
         path:"/detail",
         name:"detail",
         component:Detail
+    },
+    {
+        path:"/list",
+        name:"list",
+        component:List
     }
 ]
 

@@ -24,6 +24,7 @@
         <el-button
             size="mini"
             type="danger"
+            @click="handleDelete(scope.$index, scope.row, tableData)"
         >Delete</el-button
         >
       </template>
@@ -58,6 +59,18 @@ export default {
     handleEdit(index, row) {
       console.log(index, row);
       this.$router.push({path: "detail"})
+    },
+    handleDelete(index, row, rows) {
+      console.log(row.name);
+      axios
+          .post('http://127.0.0.1:8000/user/delete', {"name":row.name})
+          .then(function(response) {
+            if(response.data)
+              rows.splice(index, 1)
+          }.bind(this))
+          .catch(function (error) { // 请求失败处理
+            console.log(error);
+          });
     }
   }
 }
