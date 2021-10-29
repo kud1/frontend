@@ -46,6 +46,11 @@ const routes = [
                 path:"/list",
                 name:"list",
                 component:List
+            },
+            {
+                path:"/form",
+                name:"form",
+                component:Form
             }
         ]
     }
